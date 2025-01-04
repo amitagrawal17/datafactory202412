@@ -98,23 +98,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/datalakeamit202412')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobFS",
-				"typeProperties": {
-					"url": "[parameters('datalakeamit202412_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('datalakeamit202412_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/datalakeamit202412_ActivityLog_CSV')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -164,6 +147,23 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/datalakeamit202412')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/datalakeamit202412')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('datalakeamit202412_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('datalakeamit202412_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
 		}
 	]
 }
