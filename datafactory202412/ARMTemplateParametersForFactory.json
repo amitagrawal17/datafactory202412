@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactory202412"
+		},
+		"datalakeamit202412_accountKey": {
+			"value": ""
+		},
+		"datalakeamit202412_properties_typeProperties_url": {
+			"value": "https://datalakeamit202412.dfs.core.windows.net/"
+		}
+	}
+}
